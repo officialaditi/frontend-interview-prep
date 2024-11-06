@@ -1,0 +1,82 @@
+// scopes  
+
+                               Global scope
+when we are open its called as global scopes
+example:- everything im writing is writing in global scopes
+
+                               Functional scope
+everything we write in side the function is called as functional scopes.
+example:- function name() {
+    // functional scope
+ }                     
+
+                               Block scopes
+anything we write inside the block means inside the parenthesis is called as block scope
+example:- {  //block scope }
+
+##########################################################################
+                              
+                                NOTE:-
+
+        var = functional scope
+        let and const = block scope
+
+#########################################################################
+                            
+                            Shadowing:-
+
+    This occurs when we make 2 variable of the same name in higher scope (global scope) and in lower scope that is (block scope) the block scope shadows the the outer (global scope) and take the value of its own scope and then run the global scope.                               
+
+#########################################################################    
+                using variable without initilising the value
+
+1) var aditi ;
+console.log(aditi);   // undefined
+
+2) let chalo;
+console.log(chalo);  // undefined
+
+3) const check;
+console.log(check); // syntax error (to use the const variable we have to initilize the value)
+
+##########################################################################
+
+                            re-initization of value
+
+for var and let we can re-assign the value (update the value), but we cannot re-assign the value (cannot update the value) for const as it give us typeError.
+
+##########################################################################
+
+                            Hoisting
+
+before knowing the hoisting we should know the how js execution phase work!  
+ 
+hoisting:- during the creation phase .js move the variable and function at the top of the code and that is called as hoisting
+hoisting only work for var and function declaration
+**********************************
+so we have 2 phase:
+
+1) creation phase:-  inside this phase it create one window phase also
+   ($) window phase :- it store the variable and function inside it during the initial or creation phase like this
+   example:-
+        //variable and function
+        a = undefined  // this is why hoisting occurs
+        function mulitply(){} // store as it is
+        b = undefined
+
+2) execution phase:- in this phase .js execute the file code line by line and assign the value to it variable like 1st it have a so it will its value 10 and undefined will remove so we get the console vlaue as 10 in execution phase.                    
+
+code:-
+let a = 10;
+
+function mulitply (){
+    return x * 10;
+} 
+let b = mulitply(a);
+console.log(b)
+
+##########################################################################
+
+                                 Temporal dead zone (tdz)
+
+this is where the let and const is hoisted during the initial stage which is why we get the Reference Error for let and const                             

@@ -1,0 +1,32 @@
+            MAP - FILTER - REDUCE
+
+1) what is Map()??
+
+map() is an array method that return the new array by calling the function to each array element;
+
+==> it return us new array with the result
+
+==> it doesn't modified the original array
+
+==> it loop over every array element
+
+
+2) what is Filter()??
+
+filter() array method apply the conditions to an array and if the condition is passed (true) it return that passed array element
+
+==> does not execute for empty array
+
+==> it does not change the original array
+
+
+3) what is Reduce()?
+The reduce method in JavaScript iterates over an array, applying a function to accumulate its elements into a single value.
+It takes two arguments: a callback function (with an accumulator and the current item) and an optional initial value for the accumulator.
+
+==> in this initial state it have no value for acc (accumulator) so we have to provide the initial value = 0;
+
+==> doesn't modified the original array
+
+==> return new single value
+
