@@ -1,0 +1,64 @@
+functions
+
+1) what is function declaration?
+=> function declaration are those where we used [function] keyword to define the function, it is also called as function definition or function statement
+
+            syntax:- function functionName(parameters) {
+            // code to be executed
+           }
+
+
+2) what is function expression?
+=> when we store the function inside the variable is called as function expression
+
+           syntax:- let storeFun = function (parameters){
+            // code to executed
+           }
+
+    the part where we define the function with no name is called as anonymous function 
+           ==>        function (parameters) {
+                     // code to executed
+                    }        
+ if we are storing the function into the variable = function expression
+ defining the function without name = anonymous function
+
+ 3) anonymous function can be store inside the variable or passed as the callback also
+
+ ///////////////////////////////////////.//////////////////////////////////////////////////////
+
+ 1)  what are first class functions??
+
+ ==> when the function are treated like a variable, their function is called as first class function in this case (1) function can be passed to other function (2) can be used (3) manipulated (4) return by other function 
+
+ 2) what is IIFE?
+
+ ==> IIFE stands for Immediately Invoked Function Expression. 
+ ==> it an function that is Immediately Invoked after its defined.
+
+ (function (x){
+    console.log('hello',x);
+ }) ('aditi');
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+function hoisting?
+when the function is called before it initilize is called hoisting (function ) function hoisting only work with function declaration or function definition not with anonymous function its show the error. 
+but for the function declaration, in the hoisting the whole function got shifted at the top so we will get the value of function we declare even we are calling before its been declare.
+
+params vs arguments?
+when we are receiveing the value in the function is called as params
+when we are calling the function and giving value to it is arguments
+
+rest vs spread?
+when we define the function and using (...) inside the params it is = rest operator
+when we are calling the function and using (...) as arguments it is = spread operator
+
+what is callback function?
+callback function are the function that are passed to another function as arguments.  
+
+arrow function?
+its an short hand syntax for defining and using function, we have to store the function inside the variable to call or use it
+
+
+
