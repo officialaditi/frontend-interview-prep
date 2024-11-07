@@ -1,0 +1,47 @@
+Let's discuss 15 of the Most Asked Interview Questions on React JS.
+
+Ques 1: What is React and why is it used?
+===> React is an popular Javascript library used for building UI
+ (user-interface) for web applicaton,
+===> why we use:- react allow developer to break down the complex UI 
+into smaller, reusable piece called components,
+===> the components can manage and their own state, which make it more easier to handler larger complex app
+
+********************************************************************************
+
+Ques 2: What is JSX, and why is it used?
+===> JSX stand for Javascript Xml or JavaScript syntax extension
+===> why it is used for:- it used for writing HTML-like code inside the JavaScript file
+===> JSX is used to define the structure of the components.
+
+*******************************************************************************
+
+Ques 3: What is a React component?
+===> react component is nothing but the reusable building block of an UI
+==> component are the function that accept the props object and return the JSX
+===> component can be class or function that return JSX
+==> how can we create a component??
+            const MyComponent = () => {
+                 return (
+                 <div>
+                 <h1>Hello from component</h1>
+                 </div>
+                )
+            }
+==> component name always start with capital letter             
+
+********************************************************************************
+
+Ques 4: What is the difference between state and props?
+===> state :- 1) state is an object that hold dynamic data for a component;
+              2) it allow a component to store information that change over the time like user input, ui, api response;
+              3) when state changes React automatically re-render to reflect the new data;
+              4) think 'state' as memory of component for tracking information that might change.
+
+===> props:- 1) props means properties
+             2) props are used to pass data from one component to another;
+             3) we can send the data from parent component to child component via props;
+
+
+
+
