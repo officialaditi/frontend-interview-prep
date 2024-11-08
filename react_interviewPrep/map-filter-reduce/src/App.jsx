@@ -1,4 +1,5 @@
 import { FilterComp } from "./components/FilterComp";
+import { FindUnique } from "./components/FindUnique";
 import MapComp from "./components/MapComp";
 import { ReduceComp } from "./components/ReduceComp";
 
@@ -15,6 +16,8 @@ const App = () => {
      <FilterComp/>
      <h2>Ques-3:- How to render the summary of total prices for products?</h2>
      <ReduceComp/>
+     <h2>Ques-4:- How can you filter and render unique element from the array using the filter method?</h2>
+     <FindUnique/>
     </div>
   );
 };
