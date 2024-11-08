@@ -1,0 +1,57 @@
+|| (or) operator => its check if the value is true, if yes than its stop iterating and print the value directly, if not then it will iterate till it get the true value
+
+&& (and) operator => it check if both the value is having the true and then only return the value.
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+optional chaining:- ? operator called as optional operator,
+
+==> they allow us to access the deeply nested object properties without worrying about that the property is exist or not.
+==> if the properties is not their or its undefined or null , it give us the value (undefined) instead of throwing an error
+
+-->   example:-
+ const user = {
+    name: "Aditi",
+    address: {
+      city: "Mumbai",
+    },
+  };
+
+  return <strong>{user.address.city}</strong>;
+  output => Mumbai 
+  
+  but what if their is no address property what will be the output??
+  ==> it will give us the error as the address is undefined
+
+so to avoid the error of undefined we will apply the optionalchaining logic
+{user ? .address ? .city} = agar user ke under address ha toh aur address ke under city hai toh woh dikhyo yesa.
+
+Use Case:
+Use ? when you’re not sure if a property exists and want to avoid runtime errors.
+
+################################################################################
+
+nullish coalesing operator = ??
+
+this operator provide the default value if the variable, or properties don't have value, or its undefined or null
+
+means = variable a = 'undefined' or 'null' or '';
+then ?? (nullish coalesing) = 'default value'
+only work if the value is undefined or null not with any falsy value
+
+example:- 
+    let username = 'Aditi';
+    return <strong>{username ?? 'Guest'}</strong>
+  --> here it will return the Aditi as we have provide the value
+
+example := 
+    let username ;
+    return <strong>{username ?? 'Guest'}</strong>
+   --> here it will return the Guest as username name is undefined
+
+// if the variable hold the value it will return that exact same value, and if the value is undefined or null than it will give the default value we provide    
+
+Use Case:
+Use ?? when you want a default value only if the variable is null or undefined, not other falsy values like 0 or "".
+  
