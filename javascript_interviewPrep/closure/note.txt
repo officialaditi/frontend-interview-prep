@@ -1,0 +1,19 @@
+  lexical scoping:-
+
+  lexical scoping means the function can access the variable that been declared within that scope or their parent scope (outer) or to global scope also.
+
+let globalVar = "im global variable";
+
+function show() {
+  let funcVar = "im show function variable";
+  function display() {
+    console.log(funcVar);
+  }
+  display();
+}
+show();
+
+here we have define 2 variable 1) globalVar 2) funcVar
+---> globalVar can be used my anyone as its defined in global scope
+
+---> funcVar can be only used within the local or function scope only not outside the function scope

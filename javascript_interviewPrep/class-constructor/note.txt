@@ -1,0 +1,37 @@
+// class and constructor
+
+--> classes are the blueprint for creating the object with shared properties and method
+
+--> They are special functions introduced in ES6 (ES2015) to make working with objects and inheritance easier and more structured.
+
+class:-
+
+1) it will defined using (class) keyword and followed by name (classname) with capital letter
+
+constructor:-
+1) the constructor is a special method INSIDE the class that is automatically called when new instance of the class is created using the new keyword
+--> used to initilise the properties of class
+--> each class can have only ONE constructor method
+--> if no constructor is defined, js provide default constructor which is empty by default
+ 
+ syntax:-
+ class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = ag
+    }
+             // method
+  //function Hello(){
+    console.log(`hello, myself ${this.name}, and age is ${this.age}`)
+  }
+ }
+const result = new Person('aditi', 22);
+result.Hello();
+
+using properties and method:-
+
+after create the instance using new, we can access
+properties:- data specific to each instance which is initialize by constructor,
+method: function defined within class, which can be operate with the instance properties.
+
+//  instance is simply a concrete, unique copy of a class, with its own values for the properties and access to the class's methods.
