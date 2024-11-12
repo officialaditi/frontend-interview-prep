@@ -1,0 +1,100 @@
+all about class based component 
+
+Class based component:-
+
+--> this is the older way to create an component, we can skip and move to functional component too but let see how its work and syntax
+
+--> syntax
+    export class Car extends React.Component{
+        render(){
+            return <h1>hey, this is class component named as Car
+        }
+    }
+
+--> the component name should start with upper case letter (Hello, Car)
+
+--> the component has to include the {extends React.Component} statement, this statement create inheritance of React.Component and give the access to React.Component's function.
+
+--> the component also require as render() method, this method help to return HTML 
+
+
+/////////////////////////////////////////////
+
+how to store state, and work with props?
+
+                    STATE
+
+in react, components properties should be kept in object = state  
+
+example-
+creating a constructor function in the Car component and adding color property
+
+class Car extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            color: 'red'
+        }
+        render(){
+            <h2>I am Car!</h2>
+        }
+    }
+}
+
+constructor() :-
+-- if there is an constructor() function in your component, this function will be called when the component get initiated.
+-- constructor function is where we initiate the component's properties
+
+super():-
+== the constructor function is also where we honor the inheritance of parent component by include super() statement
+== they execute the parent component's constructor function, and they the component have access to all the function of parent component
+
+USING THE COLOR PROPERTY:-
+
+class Car extends React.Component{
+    constructor();
+    super();
+    this.state = {
+        color: 'red;
+    }
+    render(){
+        <h1>I am a {this.state.color} car!!
+    }
+}
+==> i am a red color
+
+
+       PROPS 
+
+ another way to handle component properties is by using props.
+
+ props are like function argument, and we send them into the component as ATTRIBUTE
+
+ example:-
+
+ class Car extends React.Component {
+    render(){
+        return <h2> i am a {this.props.model} car </h2>
+    }
+ }      
+ const root = ReactDOM.createRoot(document.getElementById);
+ root.render(<Car color='red'/>);
+                           |
+                           V
+                here we have give the props color as red
+
+         props in constructor
+
+  if our component has a constructor function, the props should always be passed to the constructor and also to React.Component via super() method
+  example:-
+
+  class Car extends React.Component{
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return <h2> i am a {this.props.model}</h2>
+    }
+  }       
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Car model="Mustang"/>);

@@ -1,0 +1,58 @@
+
+
+hoook are the function that allow the functional component to use [state] and [lifecycle method] and other react feature previously available only in class component
+
+--> important hoook:-
+useEffect
+useState
+
+lets understand how this 2 hooks work ??
+ 
+1) useState();
+
+this accept an initial state and return two values:- 
+ ---> current state
+ ---> a function that update the state
+ 
+ example:-
+ 
+ import {useState} from 'React'
+
+ function Favcolor () {
+    const [colors, setColors] = useState('');
+ }
+export default Favcolor;
+==> first value = colors => current state.
+
+==> second value = setColors => function that update the state; second value should always start with [set];
+
+==> useState('') => here state is empty string
+
+
+2) useEffect
+
+the useEffect hook allows you to perform side effect in your components
+
+some example of side effect:- 
+--> fetching data
+--> updating DOM directly
+--> timer
+
+useEffect(<Function>, [<dependency arry>])
+
+it take 2 argument 1) function 2) dependency array
+
+// no dependency array passed
+useEffect(() => {
+    // run on every render
+})
+
+// empty dependency array passed
+useEffect(() => {
+    //run only on the first render
+},[])
+
+// dependency array with any value
+useEffect(() => {
+    // run on the first render, and if any of the dependency value change it will render again
+}, [count, state, props])

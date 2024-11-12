@@ -1,0 +1,21 @@
+// what are functional components
+
+functional component are just like normal simple js function that take props object as input and return jsx
+
+what is jsx = its an javascript syntax extension that help us to use html like a code in js file
+
+function are introduced in React 16.8
+
+we can write the function component as normal function or as arrow function too:-
+
+normal functional component:-
+
+const Hello (){
+
+}
+
+arrow functional component:-
+
+const Hello = () => {
+    
+}

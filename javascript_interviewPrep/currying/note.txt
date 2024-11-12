@@ -1,7 +1,7 @@
 currying
 
 what is currying??
-currying is a technique in functional programming where a function with multiple argument is transformed into a sequence of functions, each take a single arguments.
+currying is a technique in functional programming where a function with multiple argument is transformed into a sequence of functions,where each take a single arguments.
 
 
 // in currying a function take 1 arugment at a time and return the function accept the next argument
