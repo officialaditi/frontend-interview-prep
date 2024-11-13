@@ -1,0 +1,25 @@
+what is useEffect hook:-
+
+=> this hook is used for handling the side effects, such as fetching data from api, updating dom directly, using setTimeout or setInterval.
+
+=> it render when the component get mount on the screen for 1st time 
+
+=> this hook take 2 thing <function()> and [dependency array];
+
+=> 1)if we have not provide any dependency useEffect will render everytime 
+2) if we have empty dependency array it will render only once the page get load
+3) if we have value inside the dependency array it will render 1 time and whenever the value inside the dependency array get change it will re-render
+
+syntax:-
+
+useEffect(() => {
+    // side effect code
+
+    return (
+        //clean up function (optional)
+    )
+},[dependency array])
+
+
+cleanup function:- for 1st time when component get mounted, and after :-
+the function only run when the component get unmounted or if the dependency array we put inside got updated 

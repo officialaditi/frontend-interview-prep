@@ -12,7 +12,7 @@ export const Form = () => {
 
   };
   return (
-    <>
+    <>  
       <form onSubmit={(e) => {
         e.preventDefault();
         console.log(useData)
