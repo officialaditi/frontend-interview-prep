@@ -1,0 +1,17 @@
+useRef hook
+
+definition:-  useRef hook is used to for persist the values between render, It can be used to store a mutable value that does not cause a re-render when updated.
+
+simple:- it updates the value but its doesn't cause re-render of the component while updating
+example :-
+if we use [useState] is update the value and re-render the component, whereas in [useRef] is update the value but doesn't re-render the component 
+
+useRef return only one item = current, it only return [current]
+
+when we initial useRef() we set the inital value example := useRef(0);
+
+to access the initial value or any value in the ref we have to use      [.current] property example:- count.current = which is 0 as initial
+
+syntax:-
+const anyNameRef = useRef(0);
+acceess = anyNameRef.current
