@@ -1,0 +1,50 @@
+useContext :-
+
+useContext is a React Hook that lets us share value (like data or functions) across your app without passing down that data to every component.
+
+it an part of React's context api and its useful for managing 'global' data that need to be accessed by many component, like theme, authentication status etc..
+
+why to use [useContext]?
+
+to avoid the props-drilling we will use useContext,
+
+props-drilling = its happens when we try to pass the data from parent component to multiple nested child component, its becomes repetitive and messy
+
+how to use this hook:-
+
+const value = useContext(someContext);
+parameter:- someContext
+               |
+               v
+    the context that we have previously created with createContext.
+
+    -> the context itself does not hold the information, it only represents the kind of information you can provide or read from components.           
+
+what does this context means? 
+context => its a way to share data between components without having to pass props manually through each level of the component tree.
+it allow us to define the global data that any component in that tree can access directly, which is helpgul for things like themes, user authentication etc..
+
+how to work with this hook?
+
+1) create a context:- 
+--> use React.createContext() to set up a context.
+--> this context will represent a piece of shared data.
+--> example:-
+import React, {createContext} from 'react'
+export const ThemeContext = createContext();
+
+2) Provide the context:-
+--> wrap the component tree into a 'provider' that hold the data you want to share.
+--> this provider uses the context to distribute the data to any component that need it 
+--> example:-
+return(
+    <ThemeContext.Provider value={{theme}}>
+    //app or component tree
+    </ThemeContext.Provider/>
+)
+
+3) consume the context:-
+--> any component inside the provider can use the [useContext] hook to access that shared data.
+--> example:-
+import React, {useContext} from 'react'
+const {theme, toggleTheme} = useContext(ThemeContext)
