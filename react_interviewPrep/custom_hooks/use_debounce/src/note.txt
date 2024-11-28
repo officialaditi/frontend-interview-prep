@@ -1,0 +1,28 @@
+debouncing :- its an technique where function is execute only after a specified delay has passed , since the last time the function is called
+
+>> means when the user is typing continuesly it won't make the call to the backend or api but once the user stop typing it will make the call and fetch the data
+
+
+---> the function wait for the fixed amount of delay time
+
+--> i will provide the 2 example here the 1) SearchInput and 2) Search 
+    where the SearchInput will use the debounce custom hook, where as 
+    Search wil not use it 
+    1) SearchInput => the value will only print once the user stop typing
+    2) Search => it willl print the every-single keystroke user types
+
+
+
+==> building and using debounce hook
+
+1) useDebounce() => this hook will take the inputvalue and it will give us the debounce value so we have to store it inside the variable
+
+2) as we know the debounce take 2 argument => function/value and delay 
+
+3) we will provide the clean-up function to why?
+   suppose the user want to type hello but he has taken the pause in h for about 500 ms (millisecond) for some reason , we wnat the past/last time should be reset and restart 
+   why this?
+   we want the value should print after every 1000 (1 sec) when the user stop typing..
+
+
+=> so now the value will only print once the time is pass 
